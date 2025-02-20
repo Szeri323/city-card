@@ -6,7 +6,7 @@
     --yellow: #edf11d;
 
     /* --city-card-top-gradient: ; */
-    --city-card-bottom-gradient: #eee;
+    --darker-white: #eee;
 
     /* Typography */
     --fs-h1: 2.5rem;
@@ -18,15 +18,15 @@
 
     /* Images */
     /* Header */
-    --city-at-night: url("https://geozakrecona.pl/wp-content/uploads/2018/10/warszawa-centrum_fot-warszawska-organizacja-turystyczna.jpg");
-    --city-at-day: url("https://go2warsaw.pl/wp-content/uploads/panorama-warszawy-z-widok-towers-fot-filip-kwiatkowski.jpg");
+    --city-at-night: url("./img/city-at-night.jpg");
+    --city-at-day: url("./img/city-by-day.jpg");
     /* Activities */
-    --museum-at-night: url("https://go2warsaw.pl/wp-content/uploads/muzeum-narodowe-fot-bartosz-bajerski-muzeum-narodowe-w-warszawie.jpg");
-    --museum-at-day: url("https://upload.wikimedia.org/wikipedia/commons/9/91/Muzeum_Narodowe_w_Warszawie.jpg");
-    --palace-of-culture-at-night: url("https://go2warsaw.pl/wp-content/uploads/palac-kultury-i-nauki-fot-piotr-wierzbowski-2.jpg");
-    --palace-of-culture-at-day: url("https://go2warsaw.pl/wp-content/uploads/palac-kultury-i-nauki-fot-warszawska-organizacja-turystyczna.jpg");
-    --old-town-at-night: url("https://lh3.googleusercontent.com/proxy/gp-wybxqSEucb3DyQKtedtJmywEAO1ItzepT80SiuDLrLkVl_qOoMfWrXEzyyl44GriVUzPkPiR4ZnY6sB5QW1mWAJo5PrHuFEXbQUX0kOkRnOazY0bbsNxKAi9VAsDFtFyKuZayeLZGJlMSvJnEIw4");
-    --old-town-at-day: url("https://api.kopalnia.pl/storage/2023/3/1920px_kopalnia-soli-wieliczka-kopalnia-stare-miasto-warszawa-2-700-465-18-01-2023.jpeg");
+    --museum-by-night: url("./img/muzeum-by-night.jpg");
+    --museum-by-day: url("./img/muzeum-by-day.jpg");
+    --palace-of-culture-by-night: url("./img/palace-of-culture-by-night.jpg");
+    --palace-of-culture-by-day: url("./img/palace-of-culture-by-day.jpg");
+    --old-town-by-night: url("./img/old-town-by-night.jpg");
+    --old-town-by-day: url("./img/old-town-by-day.jpeg");
 }
 
 
@@ -50,12 +50,13 @@ body {
     align-items: center;
     background: linear-gradient(var(--white), var(--bg));
     color: var(--dark);
-    
+
 }
 
 .city-card {
+    margin: 2em;
     max-width: 1000px;
-    background: linear-gradient(var(--white), var(--city-card-bottom-gradient));
+    background: linear-gradient(var(--white), var(--darker-white));
 }
 
 @media (min-width: 1000px) {
@@ -77,7 +78,7 @@ body {
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
     justify-content: end;
     color: var(--white);
     text-shadow: 0 0 1px var(--dark);
@@ -110,7 +111,6 @@ body {
 
 .hero-text {
     padding: .5em .8em;
-    /* background-color: var(--background); */
     border-radius: 16px;
     text-shadow: 0 0 5px var(--dark);
     transition: background 500ms ease-in-out, color 500ms ease-in-out;
@@ -165,15 +165,15 @@ body {
 }
 
 #activitie-img--museum {
-    background-image: var(--museum-at-day);
+    background-image: var(--museum-by-day);
 }
 
 #activitie-img--palace-of-culture {
-    background-image: var(--palace-of-culture-at-day);
+    background-image: var(--palace-of-culture-by-day);
 }
 
 #activitie-img--old-town {
-    background-image: var(--old-town-at-day);
+    background-image: var(--old-town-by-day);
 }
 
 .activitie-text {
@@ -244,7 +244,7 @@ body[data-theme="dark"] {
     --dark-mode-dark: #1e1931;
     --white: #fff;
     --yellow: #d1ab23;
-    
+
     .city-card {
         max-width: 1000px;
         background: var(--dark-mode-dark);
@@ -279,15 +279,15 @@ body[data-theme="dark"] {
     }
 
     #activitie-img--museum {
-        background-image: var(--museum-at-night);
+        background-image: var(--museum-by-night);
     }
 
     #activitie-img--palace-of-culture {
-        background-image: var(--palace-of-culture-at-night);
+        background-image: var(--palace-of-culture-by-night);
     }
 
     #activitie-img--old-town {
-        background-image: var(--old-town-at-night);
+        background-image: var(--old-town-by-night);
     }
 
     .guide-card {
