@@ -3,10 +3,8 @@
     --bg: #4b7c30;
     --dark: #333;
     --white: #fff;
-    --yellow: #edf11d;
-
-    /* --city-card-top-gradient: ; */
     --darker-white: #eee;
+    --yellow: #edf11d;
 
     /* Typography */
     --fs-h1: 2.5rem;
@@ -29,8 +27,6 @@
     --old-town-by-day: url("./img/old-town-by-day.jpeg");
 }
 
-
-
 *,
 *::before,
 *::after {
@@ -50,7 +46,6 @@ body {
     align-items: center;
     background: linear-gradient(var(--white), var(--bg));
     color: var(--dark);
-
 }
 
 .city-card {
@@ -246,7 +241,6 @@ body[data-theme="dark"] {
     --yellow: #d1ab23;
 
     .city-card {
-        max-width: 1000px;
         background: var(--dark-mode-dark);
     }
 
